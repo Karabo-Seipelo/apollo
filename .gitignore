@@ -27,6 +27,11 @@ out/
 build
 dist
 
+# Storybook build output
+storybook-static/
+
+# Storybook cache
+.storybook/cache/
 
 # Debug
 npm-debug.log*
