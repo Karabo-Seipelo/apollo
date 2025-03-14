@@ -31,14 +31,16 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [concurrently](https://www.npmjs.com/package/concurrently) for running multiple commands concurrently
+- [Sherif](https://www.npmjs.com/package/sherif) for keeping your dependencies up-to-date
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm build
+cd apollo
+npm run build
 ```
 
 ### Develop
@@ -46,8 +48,14 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm dev
+cd apollo
+npm run dev
+```
+To run storybook with all apps and packages run the following command:
+
+```
+cd apollo
+npm run dev-storybook
 ```
 
 ### Remote Caching
@@ -60,7 +68,7 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
 ```
-cd my-turborepo
+cd apollo
 npx turbo login
 ```
 
