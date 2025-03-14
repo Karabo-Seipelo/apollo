@@ -3,7 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "^build-storybook"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**", "storybook-static/**"]
     },
@@ -25,6 +25,10 @@
     },
     "dev-storybook": {
       "dependsOn": ["^dev-storybook"]
+    },
+    "build-storybook": {
+      "inputs": ["src/**", "stories/**"],
+      "outputs": ["storybook-static/**"]
     }
   }
 }
